@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swasth → Newsroom</title>
+    <link rel="stylesheet" href="css/newsroom.css">
+</head>
+<body>
+
+<!--
+    Header
+-->
+
+    <header>
+        <div class="row row-a">
+            <div class="col col-a">
+                <figure class="logo">
+                    <a href="home.html"><img src="images/logo.png" alt="Logo"></a>
+                </figure>
+            </div>
+            <div class="col col-b">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="home.html" class="active">HOME</a></li>
+                        <li>
+                            <a href="javascript:void(0)">ABOUT <i class="bx bx-chevron-down"></i></a>
+                            <ul>
+                               
+                                <li><a href="vision-and-mission.html">VISION & MISSION</a></li>
+                                <li><a href="history.html">HISTORY</a></li>
+                                <li><a href="team.html">TEAM</a></li>
+                               <li><a href="partners.html">PARTNERS</a></li>
+                                <li><a href="volunteers.html">VOLUNTEERS</a></li>
+                            
+                            </ul>
+                        </li>
+                        <li><a href="health-claims-exchange.html">HCX</a></li>
+                        <li><a href="covid-relief.html">COVID RELIEF</a></li>
+                        <li><a href="initiatives.html">OTHER INITIATIVES</i></a></li>
+                        <li><a href="how-we-work.html">HOW WE WORK</a></li>
+                        <li>
+                            <a href="javascript:void(0)">GET INVOLVED <i class="bx bx-chevron-down"></i></a>
+                            <ul>
+                               <li><a href="support-our-work.html">SUPPORT OUR WORK</a></li>
+                                <li><a href="partner-with-us.html">PARTNER WITH US</a></li>
+                                <li><a href="volunteer-with-us.html">VOLUNTEER WITH US</a></li>
+                                <li><a href="work-with-us.html">WORK WITH US</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col col-c">
+                <form class="search-form">
+                    <input type="search" placeholder="Search..." id="search">
+                    <button type="submit"><i class='bx bx-search'></i></button>
+                </form>
+            </div>
+            <div class="col col-d">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="overlay" id="off-canvas-menu">
+                    <a href="javascript:void(0)" class="close">&times;</a>
+                    <nav>
+                        <ul>
+                            <li><a href="home.html" class="active">HOME</a></li>
+                            <li>
+                                <a href="javascript:void(0)">ABOUT <i class="bx bx-chevron-down"></i></a>
+                                <ul>
+                                    <li><a href="vision-and-mission.html">VISION & MISSION</a></li>
+                                <li><a href="history.html">HISTORY</a></li>
+                                <li><a href="team.html">TEAM</a></li>
+                               <li><a href="partners.html">PARTNERS</a></li>
+                                <li><a href="volunteers.html">VOLUNTEERS</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="health-claims-exchange.html">HCX</a></li>
+                            <li><a href="covid-relief.html">COVID RELIEF</a></li>
+                            <li><a href="initiatives.html">OTHER INITIATIVES</i></a></li>
+                            <li><a href="how-we-work.html">HOW WE WORK</a></li>
+                            <li>
+                                <a href="javascript:void(0)">GET INVOLVED <i class="bx bx-chevron-down"></i></a>
+                                <ul>
+                                     <li><a href="support-our-work.html">SUPPORT OUR WORK</a></li>
+                                <li><a href="partner-with-us.html">PARTNER WITH US</a></li>
+                                <li><a href="volunteer-with-us.html">VOLUNTEER WITH US</a></li>
+                                <li><a href="work-with-us.html">WORK WITH US</a></li>
+                                </ul>
+                                 <li><a href="newsroom.html">NEWSROOM</a></li>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!--
+    Main
+-->
+
+    <main>
+        <section id="a">
+            <div class="row row-a">
+                <div class="col col-a">
+                    <h1>NEWSROOM</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row row-b">
+                <div class="col col-a">
+                    <div class="tabs">
+                        <button class="tab" onclick="openTab(this, 'our-blog')">Our Blog</button>
+                        <button class="tab" onclick="openTab(this, 'press-mentions')">Press Mentions</button>
+                        <div class="subtabs mobile">
+                            <button class="subtab" onclick="openMobileSubtab(this, 'hcx')">HCX</button>
+                            <button class="subtab" onclick="openMobileSubtab(this, 'covid')">COVID</button>                           
+                        </div>
+                        <button class="tab" onclick="openTab(this, 'business-updates')">Business Updates</button>
+                        <button class="tab" onclick="openTab(this, 'tech-updates')">Tech Updates</button>
+                    </div>
+
+                    <div class="tabcontent" id="our-blog">
+                        <div class="posts">
+                            <div class="post">
+                                <img src="images/our-blog-image-a.png" alt="Image">
+                                <h2>Aug 18, 2022</h2>
+                                <h3>The Swasth Quarterly</h3>
+                                <a href="https://swasthalliance.medium.com/the-swasth-quarterly-dbf181d0171e">→</a>
+                            </div>
+                            <div class="post">
+                                <img src="images/our-blog-image-b.png" alt="Image">
+                                <h2>Jun 10, 2021</h2>
+                                <h3>OCs, more than a one-hit wonder</h3>
+                                <a href="https://swasthalliance.medium.com/ocs-more-than-a-one-hit-wonder-a061f53f28ce">→</a>
+                            </div>
+                            <div class="post">
+                                <img src="images/our-blog-image-c.png" alt="Image">
+                                <h2>May 25, 2021</h2>
+                                <h3>Building capacity beyond concentrators</h3>
+                                <a href="https://swasthalliance.medium.com/building-capacity-beyond-concentrators-a94b35c39453">→</a>
+                            </div>
+                            <div class="post">
+                                <img src="images/our-blog-image-d.png" alt="Image">
+                                <h2>May 16, 2021</h2>
+                                <h3>10,000 and counting</h3>
+                                <a href="https://swasthalliance.medium.com/10-000-and-counting-c6152b18aa70">→</a>
+                            </div>
+                            <div class="post">
+                                <img src="images/our-blog-image-e.png" alt="Image">
+                                <h2>Jun 10, 2021</h2>
+                                <h3>The first dispatch</h3>
+                                <a href="https://swasthalliance.medium.com/the-first-dispatch-7ef837f9af66">→</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabcontent" id="press-mentions">
+                        <div class="subtabs">
+                            <button class="subtab" onclick="openSubtab(this, 'hcx')">HCX</button>
+                            <button class="subtab" onclick="openSubtab(this, 'covid')">COVID</button>                           
+                        </div>
+
+                        <div class="subtabcontent" id="hcx">
+                            <div class="post">
+                                <img src="images/post-image-1.jpg" alt="Post Image" class="post-image">
+                                <div class="post-content">
+                                    <h2 class="post-category">The Hindu Business Line</h2>
+                                    <h3 class="post-title">Insurance. Health insurance sector to continue growing in 2022</h3>
+                                    <h4 class="post-date">January 03, 2022</h4>
+                                    <a href="https://www.thehindubusinessline.com/opinion/columns/health-insurance-sector-to-continue-growing-in-2022/article38094042.ece" class="post-read-more">→</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="post">
+                                <img src="images/post-image-2.jpg" alt="Post Image" class="post-image">
+                                <div class="post-content">
+                                    <h2 class="post-category">Express Healthcare</h2>
+                                    <h3 class="post-title">Firewalling India's health data</h3>
+                                    <h4 class="post-date">October 06, 2021</h4>
+                                    <a href="https://www.expresshealthcare.in/blogs/editors-blog/firewalling-indias-health-data/431517/" class="post-read-more">→</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="post">
+                                <img src="images/post-image-3.jpg" alt="Post Image" class="post-image">
+                                <div class="post-content">
+                                    <h2 class="post-category">Medianama</h2>
+                                    <h3 class="post-title">Summary: Swasth Alliance's Health Claims Data Exchange Platform</h3>
+                                    <h4 class="post-date">September 27, 2021</h4>
+                                    <a href="https://www.medianama.com/2021/09/223-summary-health-claims-data-exchange/" class="post-read-more">→</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="subtabcontent" id="covid">
+                            <div class="post">
+                                <img src="images/PIB.png" alt="Post Image" class="post-image">
+                                <div class="post-content">
+                                    <h2 class="post-category">PIB</h2>
+                                    <h3 class="post-title">ACT Grants, Swasth Alliance and Feeding India to donate 50,000 oxygen concentrators nationally in May</h3>
+                                    <h4 class="post-date">May 07, 2021</h4>
+                                    <a href="https://pib.gov.in/Pressreleaseshare.aspx?PRID=1716912" class="post-read-more">→</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="post">
+                                <img src="images/post-image-5.jpg" alt="Post Image" class="post-image">
+                                <div class="post-content">
+                                    <h2 class="post-category">Financial Express</h2>
+                                    <h3 class="post-title">OxygenForIndia announces partnership with Swasth Alliance and Indiaspora to form National Oxygen Grid</h3>
+                                    <h4 class="post-date">February 22, 2022</h4>
+                                    <a href="https://www.financialexpress.com/healthcare/oxygenforindia-announces-partnership-with-swasth-alliance-and-indiaspora-to-form-national-oxygen-grid/2441486/" class="post-read-more">→</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="post">
+                                <img src="images/post-image-6.webp" alt="Post Image" class="post-image">
+                                <div class="post-content">
+                                    <h2 class="post-category">Financial Express</h2>
+                                    <h3 class="post-title">‘Pune model’ of collaboration among all Covid stakeholders is going pan-India</h3>
+                                    <h4 class="post-date">May 07, 2021</h4>
+                                    <a href="https://www.financialexpress.com/lifestyle/health/pune-model-of-collaboration-among-all-covid-stakeholders-is-going-pan-india/2247462/" class="post-read-more">→</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="post">
+                                <img src="images/post-image-7.jpg" alt="Post Image" class="post-image">
+                                <div class="post-content">
+                                    <h2 class="post-category">MicroBioz India</h2>
+                                    <h3 class="post-title">OxygenForIndia Announces New Partners – Swasth Alliance and Indiaspora</h3>
+                                    <h4 class="post-date">February 21, 2022</h4>
+                                    <a href="https://microbiozindia.com/oxygenforindia-announces-new-partners-swasth-alliance-and-indiaspora/" class="post-read-more">→</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="post">
+                                <img src="images/oneindia.png" alt="Post Image" class="post-image">
+                                <div class="post-content">
+                                    <h2 class="post-category">OneIndia</h2>
+                                    <h3 class="post-title">Looking for oxygen concentrators? Here's how Swasth, the telemedicine app is helping India fight COVID-19</h3>
+                                    <h4 class="post-date">April 25, 2021</h4>
+                                    <a href="https://www.oneindia.com/india/swasth-the-telemedicine-app-is-crowdfunding-inr-1-5-cr-to-help-meet-india-s-oxygen-demand-3249817.html" class="post-read-more">→</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="post">
+                                <img src="images/post-image-9.webp" alt="Post Image" class="post-image">
+                                <div class="post-content">
+                                    <h2 class="post-category">MoneyControl</h2>
+                                    <h3 class="post-title">How Swasth, the telemedicine app for COVID-19, is becoming a rallying point for healthcare sector</h3>
+                                    <h4 class="post-date">August 25, 2020</h4>
+                                    <a href="https://www.moneycontrol.com/news/business/companies/how-swasth-the-telemedicine-app-for-covid-19-is-becoming-a-rallying-point-for-healthcare-sector-5753401.html" class="post-read-more">→</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="post">
+                                <img src="images/post-image-10.png" alt="Post Image" class="post-image">
+                                <div class="post-content">
+                                    <h2 class="post-category">The New Indian Express</h2>
+                                    <h3 class="post-title">Health workers to be trained to treat patients with home care kits in Karnataka</h3>
+                                    <h4 class="post-date">June 07, 2021</h4>
+                                    <a href="https://www.newindianexpress.com/states/karnataka/2021/jun/07/health-workers-to-be-trainedto-treat-patients-with-home-care-kitsin-karnataka-2312672.html" class="post-read-more">→</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="post">
+                                <img src="images/dailybeat.jpg" alt="Post Image" class="post-image">
+                                <div class="post-content">
+                                    <h2 class="post-category">The Daily Beat</h2>
+                                    <h3 class="post-title">Swasth Alliance, Actgrant and United Way Bangalore have donated BiPAP Machines and Oxygen Concentrators to Government Hospitals in Uttarakhand</h3>
+                                    <h4 class="post-date">2021</h4>
+                                    <a href="https://www.thedailybeat.in/swasth-alliance-actgrant-and-united-way-bangalore-have-donated-bipap-machines-and-oxygen-concentrators-to-government-hospitals-in-uttarakhand/" class="post-read-more">→</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="subtabcontent" id="oxygenation-drive"></div> -->
+                        <!-- <div class="subtabcontent" id="telemedicine-oxygenation"></div> -->
+                        <!-- <div class="subtabcontent" id="telemedicine"></div> -->
+                        <!-- <div class="subtabcontent" id="csa"></div> -->
+                        <!-- <div class="subtabcontent" id="oxygen-for-everyone"></div> -->
+                    </div>
+                    <div class="tabcontent" id="business-updates">
+                        <div class="posts">
+                            
+                            <div class="post">
+                                    <div>
+                                        <div>
+                                            <h2>Business Policy Specifications</h2>
+                                            <h3>Operating policy guidelines for key business processes on HCX</h3>
+                                        </div>
+                                        <div>
+                                            <a href="https://docs.swasth.app/enhancements-policy-guidelines-group-phase-1/9EKhP0MBRjkQ0mAd1A3W/healthcare-operations-policies">→</a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <div>
+                                            <h4>Guidelines for Participant Onboarding</h4>
+                                            <a href="https://docs.hcxprotocol.io/healthcare-operations-policies/participant-onboarding">→</a>
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <h4>Guidelines for Grievance Redressal and Dispute Resolution</h4>
+                                            <a href="https://docs.hcxprotocol.io/v/v0.8/healthcare-operations-policies/guidelines-for-grievance-redressal">→</a>
+                                        </div>
+
+                                        
+                                    </div><hr>
+
+                                     <div>
+                                       <div >
+                                            <h4>Reference Template Agreement between HCX and participants</h4>
+                                            <a href="https://docs.hcxprotocol.io/v/v0.8/healthcare-operations-policies/reference-templates/hcx-terms-of-use">→</a>
+                                        </div>
+                                        <hr>
+
+                                        <div>
+                                            <h4>Guidelines for Beneficiary Authentication by Providers/Payors</h4>
+                                            <a href="https://docs.hcxprotocol.io/v/v0.8/healthcare-operations-policies/guidelines-for-beneficiary-authentication-by-providers-payors">→</a>
+                                        </div>
+
+                                        
+                                    </div>
+                                    <hr>
+                                     <div>
+                                        <div>
+                                            <h4>Reference Template: Guidelines On Enhancements in Payor/Provider Agreements</h4>
+                                            <a href="https://docs.hcxprotocol.io/v/v0.8/healthcare-operations-policies/reference-templates/payer-provider-addendum">→</a>
+                                        </div>
+                                        <hr>
+                                         <div>
+                                            <h4>Reference Template: Guidelines on enhancement of Payer-Policyholder agreements</h4>
+                                            <a href="https://docs.hcxprotocol.io/v/v0.8/healthcare-operations-policies/reference-templates/payer-policyholder-addendum">→</a>
+                                        </div>
+
+                                        
+                                    </div>
+                                    <hr>
+                                     <div>
+                                        <div>
+                                            <h4>Guidelines for Operating Charges</h4>
+                                            <a href="https://docs.hcxprotocol.io/v/v0.8/healthcare-operations-policies/guidelines-for-operating-charges">→</a>
+                                        </div>
+                                        <hr>
+                                         <div>
+                                            <h4>Guidelines for Event Auditss</h4>
+                                            <a href="https://docs.hcxprotocol.io/v/v0.8/healthcare-operations-policies/guidelines-for-event-audits">→</a>
+                                        </div>
+
+                                        
+                                    </div>
+                                </div>
+</div></div>
+
+
+
+
+                           
+
+                              
+                           
+
+                          
+
+                      
+                    <div class="tabcontent" id="tech-updates">
+                        <div class="subtabs">
+                            <button class="subtab" onclick="openSubtab2(this, 'tech-updates-hcx')">HCX</button>
+                            <button class="subtab" onclick="openSubtab2(this, 'documentation')">Documentation</button>                           
+                        </div>
+
+                        <div class="subtabcontent" id="tech-updates-hcx">
+                            <div class="posts">
+                                <div class="post">
+                                    <div>
+                                        <div>
+                                            <h2>HCX WEBSITE </h2>
+                                            <h3>Health Claims Exchange</h3>
+                                        </div>
+                                        <div>
+                                            <a href="https://hcxprotocol.io/">→</a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                       
+                                        <div>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subtabcontent" id="documentation">
+                            <div class="posts">
+                                <div class="post">
+                                    <div>
+                                        <div>
+                                            <h2>HCX Specifications</h2>
+                                            <h3>Operating policy guidelines for key business processes on HCX</h3>
+                                        </div>
+                                        <div>
+                                            <a href="https://docs.swasth.app/hcx-specifications/">→</a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <div>
+                                            <h4>Health Claims Exchange API</h4>
+                                            <a href="https://raw.githubusercontent.com/Swasth-Digital-Health-Foundation/hcx-specs/v0.7/API%20Definitions/openapi_hcx.yaml">→</a>
+                                        </div>
+                                        <div>
+                                            <h4>FHIR Implementation Guide for HCX</h4>
+                                            <a href="https://swasth-digital-health-foundation.github.io/standards/v0.7/index.html">→</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!--
+    Footer
+-->
+
+    <footer>
+        <div class="row row-a">
+            <div class="col col-a">
+                <figure class="logo">
+                    <a href="#"><img src="images/Swasth-inverted-logo.png" alt="Logo"></a>
+                </figure>
+                <p class="copyright-desktop">Copyright@2023</p>
+            </div>
+            <div class="col col-b">
+                <h2>Quick Links</h2>
+                <ul>
+                      <li><a href="home.html">HOME</a></li>
+                    <li><a href="health-claims-exchange.html">HCX</a></li>
+                    <li><a href="newsroom.html">NEWSROOM</a></li>
+                </ul>
+            </div>
+            <div class="col col-c">
+                <h2>Social Links</h2>
+                <ul>
+                     <li><a href="https://www.facebook.com/swasthorg/" target="_blank"><i class="bx bxl-facebook"></i> FACEBOOK</a></li>
+                    <li><a href="https://twitter.com/swasthorg/" target="_blank"><i class="bx bxl-twitter"></i> TWITTER</a></li>
+                    <li><a href="https://www.linkedin.com/company/swasthorg/" target="_blank"><i class="bx bxl-linkedin"></i> LINKEDIN</a></li>
+                </ul>
+            </div>
+            <div class="col col-d">
+                <h2>Contact Information</h2>
+                <p>No. 881, 6th Cross, Koramangala Club Road, 6th Block, Koramangala, Bangalore, Karnataka-560095</p>
+                <p class="copyright-mobile">Copyright@2023</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/newsroom.js"></script>
+</body>
+</html>
