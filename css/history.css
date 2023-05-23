@@ -1,0 +1,440 @@
+@import url('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css');
+@import url('common.css');
+@import url('header.css');
+@import url('footer.css');
+
+/*
+    Row A
+*/
+
+#a {
+    min-height: 100vh;
+    padding: 8% 8% 4%;
+    /* background-color: beige; */
+    background-image: url('../images/pattern.gif'), url('../images/banner.png');
+    background-position: right -5% top 30%, center center;
+    background-size: 40%, cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#a h1 {
+    color: var(--g);
+    font-weight: 400;
+    font-size: 7.2rem;
+     margin-top: 124px;
+}
+
+#a p {
+    color: var(--h);
+    font-size: 4rem;
+    line-height: 1.3;
+    margin-top: 30px;
+}
+
+#a p:nth-of-type(1) {
+    max-width: 650px;
+}
+
+#a p:last-child {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    max-width: 900px;
+}
+
+/*
+    Row B
+*/
+
+#b {
+    /* min-height: 100vh; */
+    padding: 0 8% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-image: url('../images/bg.png'); */
+    background-position: center center;
+    background-size: cover;
+}
+
+#b .row-a {
+    display: flex;
+    gap: 5%;
+}
+
+#b .row-a .col-a {
+    flex-basis: 40%;
+}
+
+#b .row-a .col-b {
+    flex-basis: 60%;
+}
+
+#b p {
+    color: var(--a);
+    font-size: 3.0rem;
+        max-width: 75%;
+    font-weight: 600;
+}
+
+/*
+    Row C
+*/
+
+#c {
+    /* background-color: beige; */
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/bg.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+#c .row-a {
+    border-bottom: 4px solid var(--a);
+}
+
+#c figure {
+    margin: 0;
+}
+
+/*
+    Row D
+*/
+
+#d {
+    /* min-height: 100vh; */
+    padding: 8% 8% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#d h2 {
+    color: var(--d);
+    font-size: 5.8rem;
+    font-weight: 1000;
+}
+
+#d h2 small {
+    font-size: 2.4rem;
+    font-weight: 1000;
+}
+
+
+h2 {
+    opacity: 0;
+    position: relative;
+    top: 30px;
+    transition: 1s;
+}
+.ani{
+ opacity: 0;
+    position: relative;
+    top: 30px;
+    transition: 1s;
+
+    
+}
+
+h2.show {
+    opacity: 1;
+    top: 0;
+}
+.ani.show{
+ opacity: 1;
+    top: 0;
+
+}
+
+hr {
+    border-top: 2px solid var(--d);
+    margin-top: 30px;
+    width: 0;
+    transition: 1s;
+}
+
+hr.show {
+    width: 100%;
+}
+
+#d .row-b {
+    padding-top: 30px;
+    display: flex;
+    gap: 5px;
+}
+
+.button-prev.button {
+  border-width: 1px;
+  border-color: var(--j) !important;
+}
+
+.button-prev .bx-chevron-right:before {
+  color: var(--a);
+  font-size: 2.5rem;
+}
+
+.button-next.button {
+  border-width: 1px;
+}
+
+.button-next .bx-chevron-right:before {
+  color: white;
+  font-size: 2.5rem;
+}
+
+/*
+    Responsive
+*/
+
+@media only screen and (max-width: 600px) {
+
+    main {
+      position: relative;
+      z-index: -1;
+    }
+
+    #a,
+    #b,
+    #c,
+    #d,
+    #e,
+    #f {
+        min-height: auto;
+    }
+
+    #a {
+      background-position: right -5% top, center center;
+      background-size: 40%, 0;
+    }
+
+    #a h1 {
+        font-size: 4.8rem;
+        margin-top:30px;
+    }
+
+    #a p {
+        font-size: 2.4rem;
+    }
+
+    #a p:last-child {
+        font-size: 1.8rem;
+    }
+
+    #b .row-a {
+        flex-direction: column;
+    }
+
+    #b p {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+}
+
+/*
+    Animation
+*/
+
+h1,
+p {
+    animation: entrance 2s 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    position: relative;
+    left: -5vh;
+}
+
+@keyframes entrance {
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+/*
+    Responsive → Desktop
+*/
+
+@media only screen and (min-width: 1300px) {
+
+    #a h1 {
+        font-size: 7rem;
+    }
+
+    #d h2 {
+        font-size: 5.8rem;
+        font-weight: 1000;
+    }
+
+}
+
+    span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6) {
+  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(7) {
+  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(8) {
+  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(9) {
+  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(10) {
+  animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(11) {
+  animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(12) {
+  animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(13) {
+  animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(14) {
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(15) {
+  animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(16) {
+  animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(17) {
+  animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(18) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(19) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(20) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(21) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(22) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(23) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(24) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(25) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(26) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(27) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(28) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(29) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(30) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(31) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(32) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(33) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(34) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+ }
+
+span:nth-child(35) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+ }
+ span:nth-child(36) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+ }
+ span:nth-child(37) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+ }
+ span:nth-child(38) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+ }
+ span:nth-child(39) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+ }
+ span:nth-child(40) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+ }
+ span:nth-child(41) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+ }
+ span:nth-child(42) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+ }
+ span:nth-child(43) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+ }
+ span:nth-child(44) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+ }
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}

@@ -1,0 +1,202 @@
+@import url('common.css');
+@import url('header.css');
+@import url('footer.css');
+
+/*
+    A
+*/
+
+#a {
+    min-height: 100vh;
+    padding: 4% 8% 8%!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#a .row-a {
+    padding-top: 40px;
+    display: flex;
+    gap: 5%;
+}
+
+#a .row-a .col {
+    flex-basis: 100%;
+}
+
+#a .row-a .col-a {
+    flex-basis: 30%;
+    flex-shrink: 0;
+    align-self: flex-end;
+}
+
+#a h1 {
+    color: var(--d);
+    font-weight: 900;
+    font-size: 7.2rem;
+    line-height: 1.111;
+    max-width: 400px;
+}
+
+h1 {
+    opacity: 0;
+    position: relative;
+    top: 30px;
+    transition: 1s;
+}
+
+h1.show {
+    opacity: 1;
+    top: 0;
+}
+
+h1.show {
+    opacity: 1;
+    top: 0;
+}
+
+hr {
+    border-top: 2px solid var(--j);
+    max-width: 0;
+    transition: 1s;
+    margin: 32px 0;
+}
+
+hr.show {
+    max-width: 480px;
+}
+
+#a p {
+    color: var(--d);
+    font-size: 2rem;
+    width: 120%;
+}
+
+#a .row-b {
+    margin-top: 8%;
+}
+
+#a h2 {
+    color: var(--q);
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 1.4;
+}
+
+#a .row-a .col-b {
+    margin-top: 100px;
+    margin-left: 70px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 40px;
+    max-width: 800px;
+}
+
+label {
+    color: var(--s);
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+[type=text],
+[type=email],
+textarea {
+    color: var(--p);
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--s);
+    background: transparent;
+}
+
+::placeholder {
+    color: var(--s);
+}
+
+textarea {
+    border: 2px solid var(--s);
+}
+
+[type=submit] {
+    color: white;
+    background: var(--l);
+    border: 2px solid var(--l);
+    outline: none;
+    align-self: start;
+    padding: 8px 32px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+[for=resume] span {
+    color: var(--l);
+    border-bottom: 2px solid var(--s);
+    padding-bottom: 4px;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+[type=file] {
+    display: none;
+}
+
+[type=submit]:hover {
+    color: var(--l);
+    background: transparent;
+}
+
+.top-margin{
+        margin-top: 122px!important;
+    width: 82%!important;
+    margin-left: 160px!important;
+}
+
+/*
+    Responsive → Mobile
+*/
+
+@media only screen and (max-width: 600px) {
+
+    #a {
+        min-height: auto;
+        padding: 8%;
+    }
+
+    #a .row-a {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #a h1 {
+        font-size: 3.6rem;
+    }
+
+    #a h2 {
+        font-size: 2.8rem;
+    }
+
+    #a p {
+        width: 100%;
+    }
+
+    #a .row-a .col-b {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+    .top-margin{
+        margin-top: 0px!important;
+    width: 100%!important;
+    margin-left: 0px!important;
+}
+
+}

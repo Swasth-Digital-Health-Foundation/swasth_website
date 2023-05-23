@@ -1,0 +1,78 @@
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+@import url('fonts.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Muli';
+}
+
+:root {
+    font-size: 10px;
+    --a: #1549e1;
+    --b: #ec702e;
+    --c: #55b936;
+    --d: #0f1f79;
+    --e: #000b30;
+    --f: #D7D5C4;
+    --g: #2b2b2b;
+    --h: #003366;
+    --i: #fffdee;
+    --j: #666561;
+    --k: #838383;
+    --l: #0046e9;
+    --m: #fa6703;
+    --n: #2a2a2a;
+    --o: #9f9f9f;
+    --p: #1448e0;
+    --q: #eb6f2d;
+    --r: #54b836;
+    --s: #c0c0c0;
+    --t: #f1e8cf;
+    --u: #999999;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--i);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-family: 'Satoshi';
+    line-height: 1;
+}
+
+p,
+a,
+input,
+.bx:before {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+small {
+    font-family: inherit;
+}

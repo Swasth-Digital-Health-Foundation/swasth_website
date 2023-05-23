@@ -1,0 +1,98 @@
+/*
+    Muli
+*/
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../fonts/muli/200.ttf');
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../fonts/muli/300.ttf');
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../fonts/muli/400.ttf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../fonts/muli/500.ttf');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../fonts/muli/600.ttf');
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../fonts/muli/700.ttf');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../fonts/muli/800.ttf');
+    font-style: normal;
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../fonts/muli/900.ttf');
+    font-style: normal;
+    font-weight: 900;
+}
+
+/*
+    Satoshi
+*/
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/satoshi/300.otf');
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/satoshi/400.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/satoshi/500.otf');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/satoshi/700.otf');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/satoshi/900.otf');
+    font-style: normal;
+    font-weight: 900;
+}

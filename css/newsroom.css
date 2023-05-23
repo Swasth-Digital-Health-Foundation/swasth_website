@@ -1,0 +1,509 @@
+@import url('common.css');
+@import url('header.css');
+@import url('footer.css');
+
+/*
+    A
+*/
+
+#a {
+    min-height: 100vh;
+    padding: 18% 14% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../images/pattern.gif');
+    background-position: right -5% top 12vw;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+#a h1 {
+    color: var(--d);
+    font-size: 8rem;
+}
+
+h1 {
+    opacity: 0;
+    position: relative;
+    top: 30px;
+    transition: 1s;
+}
+
+h1.show {
+    opacity: 1;
+    top: 0;
+}
+
+hr {
+    border-top: 2px solid var(--j);
+    margin-top: 30px;
+    max-width: 0;
+    transition: 1s;
+}
+
+hr.show {
+    max-width: 480px;
+}
+
+#a .row-b {
+    padding-top: 8%;
+}
+
+.tabs,
+.subtabs {
+    display: flex;
+    gap: 40px;
+}
+
+.subtabs {
+    gap: 16px;
+}
+
+.tab,
+.subtab {
+    color: var(--d);
+    background: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 0;
+    font-size: 2.4rem;
+}
+
+.subtab {
+    color: var(--k);
+    padding: 8px 16px;
+    font-size: 2rem;
+}
+
+.tab.active {
+    color: var(--l);
+    border-bottom: 2px solid var(--l);
+}
+
+.subtab.active {
+    color: var(--l);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.tabcontent,
+.subtabcontent {
+    padding: 20px 0;
+    display: none;
+}
+
+.tabs .subtabs {
+    display: none;
+}
+
+
+
+
+/*
+    Covid
+*/
+
+#hcx .post,
+#covid .post {
+    padding: 48px 0;
+    display: flex;
+    gap: 48px;
+}
+
+.post-image,
+.post-image {
+    width: 40%;
+    min-height: 20vw;
+    background: var(--l);
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.post-content,
+.post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-category,
+.post-category {
+    color: var(--b);
+    font-size: 2.4rem;
+}
+
+.post-title,
+.post-title {
+    color: black;
+    font-size: 4rem;
+}
+
+#hcx .post-date,
+#covid .post-date {
+    color: var(--l);
+    font-size: 1.6rem;
+}
+
+.post-read-more {
+    color: var(--n);
+    font-size: 3.2rem;
+    margin-top: auto;
+}
+
+.post ~ hr {
+    margin-top: 0;
+}
+
+.post ~ hr.show {
+    max-width: 100%;
+}
+
+
+
+
+/*
+    Business Updates
+*/
+
+#business-updates .posts {
+    margin-top: 48px;
+}
+
+#business-updates .post {
+    color: white;
+    background: var(--l);
+    padding: 4%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#business-updates .post h2 {
+    font-size: 4rem;
+}
+#business-updates .post h3 {
+    font-size: 2.4rem;
+    line-height: 1.333;
+    margin-top: 20px;
+}
+#business-updates .post h4 {
+    font-size: 1.8rem;
+}
+
+#business-updates .post a {
+    color: inherit;
+    font-size: 2rem;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#business-updates .post > div {
+   
+    gap: 48px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+
+#business-updates .post hr {
+    margin: 32px 0;
+    border-top: 1px solid white;
+}
+
+#business-updates .post hr.show {
+    max-width: 100%;
+}
+
+#business-updates .post > div:nth-of-type(2) > div:nth-of-type(2) {
+    flex-basis: 55%;
+}
+
+
+/*
+    Our Blog
+*/
+
+#our-blog .posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-top: 48px;
+}
+
+#our-blog .post {
+    color: white;
+    background: rgba(0, 70, 233, .6);
+    padding: 8%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+#our-blog .post img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+    z-index: -1;
+}
+
+#our-blog .post h2 {
+    font-size: 1.6rem;
+}
+
+#our-blog .post h3 {
+    font-size: 2.8rem;
+    line-height: 1.286;
+    margin-top: 10px;
+}
+
+#our-blog .post a {
+    color: var(--n);
+    background: white;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 10px 16px;
+    margin-top: 40px;
+    border: 2px solid white;
+    border-radius: 4px;
+    transition: .4s;
+}
+
+#our-blog .post a:hover {
+    color: white;
+    background: transparent;
+}
+
+
+
+
+/*
+    Tech Updates
+*/
+
+#tech-updates-hcx .posts,
+#documentation .posts {
+    margin-top: 48px;
+}
+
+#tech-updates-hcx .post,
+#documentation .post {
+    color: white;
+    background: var(--l);
+    padding: 4%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#tech-updates-hcx .post h2,
+#documentation .post h2 {
+    font-size: 4rem;
+}
+
+#tech-updates-hcx .post h3,
+#documentation .post h3 {
+    font-size: 2.4rem;
+    line-height: 1.333;
+    margin-top: 20px;
+}
+
+#tech-updates-hcx .post h4,
+#documentation .post h4 {
+    font-size: 2.8rem;
+}
+
+#tech-updates-hcx .post a,
+#documentation .post a {
+    color: inherit;
+    font-size: 2rem;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#tech-updates-hcx .post > div,
+#documentation .post > div {
+    display: flex;
+    gap: 48px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#tech-updates-hcx .post > div:nth-of-type(2) > div:nth-of-type(1),
+#documentation .post > div:nth-of-type(2) > div:nth-of-type(1) {
+    flex-basis: 45%;
+    border-right: 2px solid white;
+}
+
+#tech-updates-hcx .post hr,
+#documentation .post hr {
+    margin: 32px 0;
+    border-top: 1px solid white;
+}
+
+#tech-updates-hcx .post hr.show,
+#documentation .post hr.show {
+    max-width: 100%;
+}
+
+#tech-updates-hcx .post > div:nth-of-type(2) > div:nth-of-type(2),
+#documentation .post > div:nth-of-type(2) > div:nth-of-type(2) {
+    flex-basis: 55%;
+}
+
+
+
+
+/*
+    Responsive → Mobile
+*/
+
+@media only screen and (max-width: 600px) {
+
+    #a {
+        background-position: right -5% top 0;
+    }
+
+    #a h1 {
+        font-size: 4rem;
+    }
+
+    .tabs,
+    .subtabs {
+        flex-direction: column;
+    }
+
+    .tab,
+    .subtab {
+        font-size: 1.6rem;
+    }
+
+    .tabs .tab.active + .subtabs {
+        display: flex;
+    }
+
+    #press-mentions .subtabs {
+        display: none;
+    }
+
+
+
+
+    .post {
+        flex-direction: column;
+    }
+
+    .post-image {
+        width: 100%;
+    }
+
+    .post-category {
+        font-size: 1.6rem;
+    }
+
+    .post-title {
+        font-size: 2.4rem;
+        line-height: 1.3;
+    }
+
+    .post-read-more {
+        font-size: 2.4rem;
+    }
+
+
+
+#business-updates .post > div {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #business-updates .post > div:nth-of-type(2) > div:nth-of-type(1) {
+        border-right: none;
+    }
+
+    #business-updates .post h2 {
+        font-size: 2.4rem;
+        line-height: 1.333;
+    }
+
+    #business-updates .post h3 {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+
+    #business-updates .post h4 {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+
+    #business-updates .post h4 + a {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    #our-blog .posts {
+        grid-template-columns: 1fr;
+    }
+
+
+
+
+    #tech-updates-hcx .post > div,
+    #documentation .post > div {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #tech-updates-hcx .post > div:nth-of-type(2) > div:nth-of-type(1),
+    #documentation .post > div:nth-of-type(2) > div:nth-of-type(1) {
+        border-right: none;
+    }
+
+    #tech-updates-hcx .post h2,
+    #documentation .post h2 {
+        font-size: 2.4rem;
+        line-height: 1.333;
+    }
+
+    #tech-updates-hcx .post h3,
+    #documentation .post h3 {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+    
+    #tech-updates-hcx .post h4,
+    #documentation .post h4 {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+
+    #tech-updates-hcx .post h4 + a,
+    #documentation .post h4 + a {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+}
+
+
+
+
+/*
+    Responsive → Desktop
+*/
+
+@media only screen and (min-width: 600px) {
+
+    .hide-on-desktop {
+        display: none;
+    }
+
+}

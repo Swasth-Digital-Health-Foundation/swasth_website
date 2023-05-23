@@ -1,0 +1,291 @@
+@import url('common.css');
+@import url('header.css');
+@import url('footer.css');
+
+/*
+    Row A
+*/
+
+#a {
+    min-height: 100vh;
+    padding: 24% 8% 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../images/pattern.gif'), url('../images/banner.png');
+    background-position: right -5% top 5%, center center;
+    background-size: 60%, cover;
+    background-repeat: no-repeat;
+}
+
+#a h1 {
+    color: var(--d);
+    font-size: 5.8rem;
+    font-weight: 1000;
+}
+
+h1 {
+    opacity: 0;
+    position: relative;
+    top: 30px;
+    transition: 1s;
+}
+
+h1.show {
+    opacity: 1;
+    top: 0;
+}
+
+hr {
+    border-top: 2px solid var(--d);
+    margin-top: 30px;
+    width: 0;
+    transition: 1s;
+}
+
+hr.show {
+    width: 100%;
+}
+
+#a .row-b {
+    padding-top: 8%;
+    display: flex;
+    gap: 5%;
+}
+
+#a .row-b .col {
+    flex-basis: 100%;
+}
+
+#a .row-b .col-a {
+    flex-basis: 24%;
+    flex-shrink: 0;
+}
+
+/*
+    Scrollspy
+*/
+
+.scrollspy nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: sticky;
+    top: 10%;
+}
+
+.scrollspy nav ol {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 30px;
+}
+
+.scrollspy nav li::marker {
+    color: #1549e150;
+    font-weight: 700;
+    font-size: 0rem;
+    line-height: 1.5em;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.scrollspy nav li.active::marker {
+    color: var(--a);
+}
+
+.scrollspy nav a {
+    color: var(--a);
+    font-weight: 700;
+    font-size: 2.4rem;
+    opacity: 0.3;
+    transition: 0.2s;
+}
+
+.scrollspy nav .active a {
+    font-size: 3.6rem;
+    line-height: 1em;
+    opacity: 1;
+}
+
+.scrollspy nav p {
+    margin-top: 10px;
+}
+
+.scrollspy article {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.scrollspy hr {
+    border-color: var(--j);
+    margin: 10% 0;
+}
+
+.profile-card figure {
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.profile-card figcaption {
+    color: var(--j);
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+
+.profile-card figcaption small {
+    color: var(--h);
+    font-family: 'Muli';
+    font-weight: 600;
+    font-size: 1.4rem;
+    display: block;
+    margin-top: 10px;
+}
+
+.profile-card:hover figure img {
+    filter: grayscale(0);
+}
+
+/*
+.profile-card figure:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 0;
+    background-color: var(--a);
+    border-radius: 50%;
+    opacity: 0.4;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+#board figure:after {
+    background-color: var(--b);
+}
+
+#steering-company figure:after {
+    background-color: var(--c);
+}
+
+.profile-card:hover figure:after {
+    height: 180px;
+}
+*/
+
+#core-team .profile-card:hover figcaption span,
+#core-team .profile-card:hover figcaption small span{
+    color: var(--c);
+}
+
+#board .profile-card:hover figcaption,
+#board .profile-card:hover figcaption small {
+    color: var(--a);
+}
+
+#steering-committee .profile-card:hover figcaption,
+#steering-committee .profile-card:hover figcaption small {
+    color: var(--b);
+}
+
+#core-team ol,
+#board ol,
+#steering-committee ol {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* margin-left: 30px; */
+}
+
+#core-team ol li::marker,
+#board ol li::marker,
+#steering-committee ol li::marker {
+    color: var(--a);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+#core-team ol h2,
+#board ol h2,
+#steering-committee ol h2 {
+    color: var(--a);
+    font-size: 2.4rem;
+}
+
+#board ol li::marker,
+#board ol h2 {
+    color: var(--a);
+}
+
+#steering-committee ol li::marker,
+#steering-committee ol h2 {
+    color: var(--b);
+}
+
+#core-team ol li::marker,
+#core-team ol h2 {
+    color: var(--c);
+}
+
+#core-team ol p,
+#board ol p,
+#steering-company ol p {
+    margin-top: 10px;
+}
+
+#core-team ol,
+#board ol,
+#steering-committee ol {
+    display: none;
+}
+
+
+
+/*
+    Responsive → Mobile
+*/
+
+@media only screen and (max-width: 600px) {
+
+    #a {
+        background-position: right -5% top 0, center center;
+    }
+
+    #a .row-b {
+        flex-direction: column;
+    }
+
+    .scrollspy article {
+        grid-template-columns: 1fr;
+    }
+
+    .scrollspy nav {
+        display: none;
+    }
+
+    #core-team ol,
+    #board ol,
+    #steering-committee ol {
+        display: block;
+    }
+
+}

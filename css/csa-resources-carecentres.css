@@ -1,0 +1,147 @@
+@import url('common.css');
+@import url('header.css');
+@import url('footer.css');
+
+/*
+A
+*/
+
+#a {
+    min-height: 100vh;
+    padding: 12% 8% 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#a .row-a {
+    display: flex;
+    gap: 5%;
+    align-items: flex-end;
+}
+
+#a .row-a .col {
+    flex-basis: 100%;
+}
+
+#a h1 {
+    color: var(--g);
+    font-weight: 400;
+    font-size: 7rem;
+    line-height: 1.111;
+}
+
+h1 {
+    opacity: 0;
+    position: relative;
+    top: 30px;
+    transition: 1s;
+}
+
+h1.show {
+    opacity: 1;
+    top: 0;
+}
+
+h1.show {
+    opacity: 1;
+    top: 0;
+}
+
+hr {
+    border-top: 2px solid var(--j);
+    max-width: 0;
+    transition: 1s;
+    margin: 32px 0;
+}
+
+hr.show {
+    max-width: 518px;
+}
+
+#a p {
+    color: var(--d);
+    font-size: 2rem;
+}
+
+
+
+
+/*
+B
+*/
+#b {
+    /* min-height: 100vh; */
+    padding: 4% 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1220px;
+    margin: auto;
+}
+
+#b .row {
+    display: flex;
+    gap: 8%;
+    justify-content: center;
+}
+
+
+
+
+/*
+C
+*/
+
+#c {
+    /* min-height: 100vh; */
+    padding: 4% 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1220px;
+    margin: auto;
+}
+
+#c .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56px;
+}
+
+figcaption {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-top: 16px;
+}
+
+
+
+
+/*
+Responsive → Mobile
+*/
+
+@media only screen and (max-width: 600px) {
+
+    #a,
+    #c {
+        min-height: auto;
+        padding: 8%;
+    }
+
+    #a .row-a {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #a h1 {
+        font-size: 3.6rem;
+    }
+
+    #c .row {
+        grid-template-columns: 1fr;
+    }
+
+}

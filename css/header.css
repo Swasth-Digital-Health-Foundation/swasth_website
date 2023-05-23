@@ -1,0 +1,230 @@
+@import url('common.css');
+
+header {
+    /* background-color: beige; */
+    width: 100%;
+    padding: 4% 8%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+/*
+    Row A
+*/
+
+header .row-a {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 4%;
+}
+
+header .row-a .col-a {
+    margin-right: auto;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu li {
+    position: relative;
+    z-index: 1;
+}
+
+.menu a {
+    color: var(--g);
+    white-space: nowrap;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: var(--a) !important;
+}
+
+.menu > ul > li > a:hover:before,
+.menu > ul > li > a.active:before {
+    content: '';
+    background-color: var(--c);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    left: -6px;
+    z-index: -1;
+}
+
+.menu a .bx:before,
+.menu a .bx:before {
+    color: var(--b);
+}
+
+.menu li ul {
+    background-color: white;
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 0;
+    flex-direction: column;
+    min-width: 100%;
+    gap: 0;
+    display: none;
+}
+
+.menu li ul li:not(:last-child) {
+    border-bottom: 1px solid var(--f);
+}
+
+.menu li ul a {
+    padding: 20px;
+}
+
+.menu li ul a:hover:before,
+.menu li ul a.active:before {
+    top: 15px;
+    left: 13px;
+}
+
+header .row-a .col-c {
+    display: none;
+}
+
+.search-form {
+    display: flex;
+}
+
+.search-form #search {
+    max-width: 150px;
+    padding: 5px 30px 5px 15px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.search-form button {
+    color: white;
+    background-color: var(--a);
+    border: 1px solid var(--a);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 6px 8px 4px 10px;
+    margin-left: -28px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background-color: var(--a);
+    width: 35px;
+    height: 2px;
+    transition: 0.2s linear;
+}
+
+.overlay {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    transition: 0.2s;
+}
+
+.overlay.show {
+    width: 30%;
+}
+
+.overlay .close {
+    color: var(--h);
+    font-weight: 200;
+    font-size: 4.8rem;
+    line-height: 1;
+    position: absolute;
+    top: 8%;
+}
+
+.overlay ul {
+    list-style-type: none;
+}
+
+header .overlay ul a {
+    color: var(--d);
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.overlay li ul {
+    display: none;
+}
+
+.overlay li ul a {
+    color: var(--g);
+    font-size: 1.5rem;
+}
+
+.overlay li ul a:hover,
+.overlay li ul a.active {
+    color: var(--a);
+}
+
+.overlay a .bx:before,
+.overlay a .bx:before {
+    color: var(--b);
+}
+
+/*
+    Responsive
+*/
+
+@media only screen and (max-width: 900px) {
+
+    header .logo img {
+        max-width: 100px;
+    }
+
+    header .row-a .col-b {
+        display: none;
+    }
+
+    .search-form #search {
+        max-width: 110px;
+    }
+
+}
+
+/*
+    Responsive → Mobile
+*/
+
+@media only screen and (max-width: 600px) {
+
+    header {
+        position: static;
+    }
+
+    .overlay.show {
+        width: 100%;
+    }
+
+}
