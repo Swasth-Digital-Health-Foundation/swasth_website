@@ -61,7 +61,15 @@
 #b h2 small {
     font-size: 2.4rem;
 }
-
+#b .row-b .col {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+#b .row-b .col img {
+    max-height: 506px;
+}
 h2 {
     opacity: 0;
     position: relative;
@@ -545,7 +553,15 @@ hr.show {
         font-size: 2.4rem;
         visibility: visible;
     }
-
+#b .row-b .col {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+#b .row-b .col img {
+    max-height: 250px;
+}
     img[src="images/logos/logos.png"],
     img[src="images/logos/WAVE2-PARTNERS.png"],
     img[src="images/logos/WAVE2-DONORS.png"] {
