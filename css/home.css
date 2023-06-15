@@ -4,7 +4,7 @@
 @import url('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css');
 
 /*
-    Row A
+    A
 */
 
 #a {
@@ -37,7 +37,7 @@
 }
 
 /*
-    Row B
+    B
 */
 
 #b {
@@ -165,8 +165,39 @@ hr.show {
     opacity: 1;
 }
 
+
+#b .row-c {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    display: none;
+}
+
+#b .row-c .col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#b .row-c h4 {
+    color: var(--a);
+    font-size: 3.2rem;
+}
+
+#b .row-c p {
+    font-size: 1.8rem;
+}
+
+#b .row-c p a {
+    color: var(--a);
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
+
+
 /*
-    Row C
+    C
 */
 
 #c {
@@ -491,6 +522,14 @@ hr.show {
     #b .row-b .col {
         min-height: 200px;
         margin-top: 30px;
+    }
+
+    #b .row-b {
+        display: none;
+    }
+
+    #b .row-c {
+        display: flex;
     }
 
     #c h3 {
