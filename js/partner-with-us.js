@@ -50,8 +50,8 @@ function sendEmail(e) {
     Email.send({
         Host: "smtp.elasticemail.com",
        Username: "contact@swasthalliance.org",
-        Password: "C9C69336BA8D474A0C163F0B60A4F319A368",
-        To: 'hello@swasthalliance.org',
+        Password: "6D72B625C67FE0960798E7866A88C1353313",
+        To: 'contact@swasthalliance.org',
         From: "contact@swasthalliance.org",
         Subject: "Partner With Us Form Enquiry",
         Body: "Organisation: "+ organisation +"<br>Point: "+ point +"<br>Email: "+ email +"<br>",
