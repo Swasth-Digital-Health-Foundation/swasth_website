@@ -162,18 +162,20 @@
             <div class="row row-a">
                 <div class="col col-a">
                     <h2>If you would like to partner with us:</h2>
-                     <form onsubmit="sendEmail(event)" id="form1"  >
-                        <label for="organisation">
-                            <input type="text" placeholder="Name of your organisation" id="organisation" required>
-                        </label>
-                        <label for="point">
-                            <input type="text" placeholder="Point of Contact for your organisation" id="point" required>
-                        </label>
-                        <label for="email">
-                            <input type="text" placeholder="Email ID and phone number" id="email" required>
-                        </label>
-                        <input type="submit" value="Send">
-                    </form>
+                     <form id="contactForm" action="https://formsubmit.co/ajax/govind@litmusink.com" method="POST">
+    <label>
+        <input type="text" placeholder="Name of your organisation" name="organisation" required>
+    </label>
+    <label>
+        <input type="text" placeholder="Point of Contact for your organisation" name="point" required>
+    </label>
+    <label>
+        <input type="text" placeholder="Email ID and phone number" name="email" required>
+    </label>
+    <input type="submit" value="Send">
+</form>
+
+<div id="responseMessage"></div>
                 </div>
             </div>
         </section>
@@ -218,7 +220,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="js/header.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  
     <script src="js/partner-with-us.js"></script>
     
 </body>
