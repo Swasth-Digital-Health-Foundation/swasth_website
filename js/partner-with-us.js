@@ -51,7 +51,7 @@ function sendEmail(e) {
         Host: "smtp.elasticemail.com",
        Username: "hello@swasthalliance.org",
         Password: "C6205DA4683A53C185138813AEA94D75F4DB",
-        To: 'anmol@swasthalliance.org',
+        To: 'hello@swasthalliance.org',
         From: "hello@swasthalliance.org",
         Subject: "Partner With Us Form Enquiry",
         Body: "Organisation: "+ organisation +"<br>Point: "+ point +"<br>Email: "+ email +"<br>",
