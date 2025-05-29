@@ -39,26 +39,33 @@ function openTab(e, id){
     Send Email
 */
 
-var organisation, point, email;
-function sendEmail(e) {
-    e.preventDefault();
-    organisation = document.getElementById('organisation').value;
-    point = document.getElementById('point').value;
-    email = document.getElementById('email').value;
-    console.log(organisation, point, email);
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default form submission
 
-    Email.send({
-        Host: "smtp.elasticemail.com",
-       Username: "contact@swasthalliance.org",
-        Password: "6D72B625C67FE0960798E7866A88C1353313",
-        To: 'contact@swasthalliance.org',
-        From: "contact@swasthalliance.org",
-        Subject: "Partner With Us Form Enquiry",
-        Body: "Organisation: "+ organisation +"<br>Point: "+ point +"<br>Email: "+ email +"<br>",
-         
-    }).then(
-        message => alert("Message Sent Succesfully")
-    );
-}
+    const form = e.target;
+    const formData = new FormData(form);
+    const action = form.action;
+
+    fetch(action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            document.getElementById('responseMessage').innerText = "Form submitted successfully!";
+            form.reset();
+        } else {
+            response.json().then(data => {
+                document.getElementById('responseMessage').innerText = data.message || "Form submission failed.";
+            });
+        }
+    })
+    .catch(error => {
+        document.getElementById('responseMessage').innerText = "Something went wrong. Please try again.";
+    });
+});
 
 
