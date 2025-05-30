@@ -7,29 +7,34 @@ $(document).ready(function(){
     Send Email
 */
 
-var fullname, email, motivation;
-function sendEmail(e) {
+document.getElementById('form3').addEventListener('submit', function (e) {
     e.preventDefault();
-    fullname = document.getElementById('name').value;
-    email = document.getElementById('email').value;
-    motivation = document.getElementById('motivation').value;
-   
-    console.log(fullname, email, motivation);
 
-    Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "hello@swasthalliance.org",
-        Password: "C6205DA4683A53C185138813AEA94D75F4DB",
-        To: 'shivangi@swasthalliance.org',
-        From: "hello@swasthalliance.org",
-        Subject: "Volunteers With Us Form Enquiry",
-        Body: "Name: "+ fullname +"<br>Email: "+ email +"<br>Motivation: "+ motivation +"<br>",
-         
-    }).then(
-        message => alert("Message Sent Succesfully")
-    );
-}
+    const form = e.target;
+    const formData = new FormData(form);
+    const action = form.action;
 
+    fetch(action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Form submitted successfully!");
+            form.reset();
+        } else {
+            response.json().then(data => {
+                alert(data.message || "Form submission failed.");
+            });
+        }
+    })
+    .catch(error => {
+        alert("Something went wrong. Please try again.");
+    });
+});
 
 
 /*
