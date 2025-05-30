@@ -121,23 +121,25 @@
                     <h1>SUPPORT OUR WORK</h1>
                     <hr>
                     <h2>If you would like to donate or write us a grant</h2>
-                     <form onsubmit="sendEmail(event)" id="form2">
-                        <label for="organisation">
-                            <input type="text" placeholder="Name of your organisation" id="organisation" required required>
-                        </label>
-                        <label for="point">
-                            <input type="text" placeholder="Point of Contact for your organisation" id="point" required required>
-                        </label>
-                        <label for="email">
-                            <input type="text" placeholder="Email ID and phone number" id="email" required required>
-                        </label>
-                        <label for="motivation">
-                            <span>Message</span>
-                            <textarea cols="30" rows="10" id="motivation" required></textarea>
-                        </label>
-                        
-                        <input type="submit" value="Send">
-                    </form>
+                    <form id="form2" action="https://formsubmit.co/ajax/4305123af4f36567952b14885795f8a9" method="POST">
+    <label for="organisation">
+        <input type="text" placeholder="Name of your organisation" name="organisation" id="organisation" required>
+    </label>
+    <label for="point">
+        <input type="text" placeholder="Point of Contact for your organisation" name="point" id="point" required>
+    </label>
+    <label for="email">
+        <input type="text" placeholder="Email ID and phone number" name="email" id="email" required>
+    </label>
+    <label for="motivation">
+        <span>Message</span>
+        <textarea cols="30" rows="10" name="motivation" id="motivation" required></textarea>
+    </label>
+
+   
+
+    <input type="submit" value="Send">
+</form>
                 </div>
             </div>
         </section>
