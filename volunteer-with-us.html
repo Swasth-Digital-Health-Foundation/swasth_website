@@ -130,20 +130,19 @@
             <div class="row row-b">
                 <div class="col col-a">
                     <h2>Share your details to volunteer with us:</h2>
-                    <form onsubmit="sendEmail(event)" id="form3">
-                        <label for="name">
-                            <input type="text" placeholder="Name" id="name" required>
-                        </label>
-                        <label for="email">
-                            <input type="text" placeholder="Email ID and Phone Number" id="email" required>
-                        </label>
-                        <label for="motivation">
-                            <span>Motivation for joining Swasth Alliance</span>
-                            <textarea cols="30" rows="10" id="motivation" required></textarea>
-                        </label>
-                        
-                        <input type="submit" value="Send">
-                    </form>
+                   <form id="form3" action="https://formsubmit.co/ajax/4305123af4f36567952b14885795f8a9" method="POST">
+    <label for="name">
+        <input type="text" placeholder="Name" name="name" id="name" required>
+    </label>
+    <label for="email">
+        <input type="text" placeholder="Email ID and Phone Number" name="email" id="email" required>
+    </label>
+    <label for="motivation">
+        <span>Motivation for joining Swasth Alliance</span>
+        <textarea cols="30" rows="10" name="motivation" id="motivation" required></textarea>
+    </label>
+    <input type="submit" value="Send">
+</form>
                 </div>
             </div>
         </section>
