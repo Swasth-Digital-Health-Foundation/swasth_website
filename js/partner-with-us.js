@@ -40,7 +40,7 @@ function openTab(e, id){
 */
 
 document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault(); // Default form submit ko roko
 
     const form = e.target;
     const formData = new FormData(form);
@@ -55,16 +55,16 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     })
     .then(response => {
         if (response.ok) {
-            document.getElementById('responseMessage').innerText = "Form submitted successfully!";
+            alert("Form submitted successfully!");
             form.reset();
         } else {
             response.json().then(data => {
-                document.getElementById('responseMessage').innerText = data.message || "Form submission failed.";
+                alert(data.message || "Form submission failed.");
             });
         }
     })
     .catch(error => {
-        document.getElementById('responseMessage').innerText = "Something went wrong. Please try again.";
+        alert("Something went wrong. Please try again.");
     });
 });
 
