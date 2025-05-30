@@ -26,7 +26,7 @@ document.getElementById('form2').addEventListener('submit', function (e) {
     const form = e.target;
     const formData = new FormData(form);
     const action = form.action;
-
+formData.append("form_name", "Support Our Work");
     fetch(action, {
         method: 'POST',
         body: formData,
